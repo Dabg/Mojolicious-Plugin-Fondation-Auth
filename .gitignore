@@ -1,0 +1,3 @@
+.build/
+*.bak
+Mojolicious-Plugin-Fondation-Auth-*/

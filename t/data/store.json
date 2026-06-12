@@ -1,0 +1,11 @@
+{
+   "00000000-0000-0000-0000-000000000001" : {
+      "active" : true,
+      "created_at" : "2026-01-01T00:00:00",
+      "email" : "test@example.com",
+      "id" : "00000000-0000-0000-0000-000000000001",
+      "password" : "$argon2id$v=19$m=262144,t=3,p=1$aU+DYbDCR2hP1qRvZ55zdg$YJP4fDFG9FIvmUrm0oBXk+uF6mvr+cfqYWu5PdjoABk",
+      "updated_at" : "2026-01-01T00:00:00",
+      "username" : "test"
+   }
+}
