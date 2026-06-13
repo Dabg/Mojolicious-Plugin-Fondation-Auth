@@ -1,3 +1,4 @@
-.build/
+/.build/
 *.bak
-Mojolicious-Plugin-Fondation-Auth-*/
+/Mojolicious-Plugin-*-*/
+/*.tar.gz

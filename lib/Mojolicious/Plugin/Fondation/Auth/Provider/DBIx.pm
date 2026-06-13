@@ -19,7 +19,7 @@ sub new ($class, %args) {
     $self->password_column('password') unless $self->password_column;
     $self->name('dbix');
 
-    $self->log->info(
+    $self->log->debug(
         $self->model
             ? "DBIx provider initialized for model '$self->{model}'"
             : "DBIx provider initialized (model will be resolved from model_list)"
@@ -46,7 +46,7 @@ sub validate_user ($self, $c, $username, $password, $extra = {}) {
     return undef unless $user;
 
     if ($user->check_password($password)) {
-        $self->log->info("Authentication successful for '$username'");
+        $self->log->debug("Authentication successful for '$username'");
         return $user->id // $username;
     }
 
@@ -57,7 +57,7 @@ sub validate_user ($self, $c, $username, $password, $extra = {}) {
 # ── Load user ─────────────────────────────────────────────────────────
 
 sub load_user ($self, $app, $uid) {
-    $self->log->debug("load_user called for uid='$uid'");
+    #$self->log->debug("load_user called for uid='$uid'");
 
     # The Authentication plugin calls load_user with the controller as
     # first argument, not the Mojolicious app. Use it directly.

@@ -26,12 +26,12 @@ sub register ($self, $app, $config) {
     # ── Session timeout ──────────────────────────────────────────────
     if (my $timeout = $config->{timeout_sessions}) {
         $app->sessions->default_expiration($timeout);
-        $self->log->info("session timeout set to $timeout seconds");
+        $self->log->debug("session timeout set to $timeout seconds");
     }
 
     # ── Provider ─────────────────────────────────────────────────────
     my $provider_class = $config->{provider};
-    $self->log->info("using provider $provider_class");
+    $self->log->debug("using provider $provider_class");
     my $provider = $provider_class->new(
         %$config,
         app => $app,
@@ -101,8 +101,6 @@ sub register ($self, $app, $config) {
         $c->flash(message => $c->l('Logged out'), message_class => 'alert-success');
         $c->redirect_to('/');
     });
-
-    $app->log->info("Fondation::Auth loaded");
 
     return $self;
 }
