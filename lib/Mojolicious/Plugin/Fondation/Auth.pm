@@ -113,10 +113,6 @@ __END__
 
 =encoding UTF-8
 
-=head1 NAME
-
-Mojolicious::Plugin::Fondation::Auth - Fondation authentication plugin
-
 =head1 SYNOPSIS
 
     # In myapp.conf:
