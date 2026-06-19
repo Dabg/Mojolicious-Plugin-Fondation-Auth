@@ -37,10 +37,6 @@ Password hashing (Argon2id) is handled by the Result class
 ([Mojolicious::Plugin::Fondation::Auth::Schema::Result::User](https://metacpan.org/pod/Mojolicious%3A%3APlugin%3A%3AFondation%3A%3AAuth%3A%3ASchema%3A%3AResult%3A%3AUser)) via
 `insert`/`update` hooks — the plugin only verifies.
 
-# NAME
-
-Mojolicious::Plugin::Fondation::Auth - Fondation authentication plugin
-
 # DEPENDENCIES
 
 This plugin depends on [Mojolicious::Plugin::Fondation::User](https://metacpan.org/pod/Mojolicious%3A%3APlugin%3A%3AFondation%3A%3AUser), which

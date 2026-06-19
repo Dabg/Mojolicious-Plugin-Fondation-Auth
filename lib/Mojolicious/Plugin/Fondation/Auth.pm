@@ -58,6 +58,7 @@ sub register ($self, $app, $config) {
     my $r = $app->routes;
 
     # ── Route condition: fondation.authenticated ────────────────────
+    # Overrides the no-op fallback registered by Fondation core.
     $app->routes->add_condition('fondation.authenticated' => sub {
         my ($route, $c, $captures, $required) = @_;
         my $auth = $c->is_user_authenticated;
