@@ -1,6 +1,7 @@
 Revision history for Mojolicious-Plugin-Fondation-Auth
 
 {{$NEXT}}
+    - replace table name with result_class name
 
 0.01  2026-06-12
     - Initial release

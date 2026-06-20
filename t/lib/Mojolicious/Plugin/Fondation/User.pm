@@ -12,7 +12,7 @@ sub fondation_meta {
         defaults     => {
             models => {
                 user => {
-                    source  => 'users',
+                    source  => 'User',
                     backend => undef,    # resolved via default_backend or first backend
                 },
             },
