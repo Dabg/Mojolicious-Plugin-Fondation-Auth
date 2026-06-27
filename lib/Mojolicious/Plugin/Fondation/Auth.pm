@@ -39,7 +39,6 @@ sub register ($self, $app, $config) {
 
     # ── Authentication plugin ────────────────────────────────────────
     $app->plugin('Authentication' => {
-        autoload_user => 1,
         session_key   => $config->{session_key},
         load_user     => sub ($app, $uid) {
             return $provider->load_user($app, $uid);
