@@ -100,6 +100,7 @@ sub auth_form ($self, $c) {
     return $c->render_to_string(inline => <<'HTML');
 <h1><%= l 'Login' %></h1>
 <form method="post">
+  <%= csrf_field %>
   <label><%= l 'Username' %>:</label>
   <input type="text" name="username" required><br>
   <label><%= l 'Password' %>:</label>
